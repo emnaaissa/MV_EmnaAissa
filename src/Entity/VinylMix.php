@@ -29,6 +29,21 @@ class VinylMix
     #[ORM\Column]
     private ?\DateTimeImmutable $createdAt = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $no = null;
+
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $descriptionn = null;
+
+    #[ORM\Column]
+    private ?int $trackCountt = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $genree = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $createdAtt = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +105,66 @@ class VinylMix
     public function setCreatedAt(\DateTimeImmutable $createdAt): static
     {
         $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getNo(): ?string
+    {
+        return $this->no;
+    }
+
+    public function setNo(string $no): static
+    {
+        $this->no = $no;
+
+        return $this;
+    }
+
+    public function getDescriptionn(): ?string
+    {
+        return $this->descriptionn;
+    }
+
+    public function setDescriptionn(?string $descriptionn): static
+    {
+        $this->descriptionn = $descriptionn;
+
+        return $this;
+    }
+
+    public function getTrackCountt(): ?int
+    {
+        return $this->trackCountt;
+    }
+
+    public function setTrackCountt(int $trackCountt): static
+    {
+        $this->trackCountt = $trackCountt;
+
+        return $this;
+    }
+
+    public function getGenree(): ?string
+    {
+        return $this->genree;
+    }
+
+    public function setGenree(string $genree): static
+    {
+        $this->genree = $genree;
+
+        return $this;
+    }
+
+    public function getCreatedAtt(): ?string
+    {
+        return $this->createdAtt;
+    }
+
+    public function setCreatedAtt(string $createdAtt): static
+    {
+        $this->createdAtt = $createdAtt;
 
         return $this;
     }
