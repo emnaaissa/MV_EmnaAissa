@@ -23,10 +23,7 @@ class MixController extends AbstractController
         $entityManager->persist($mix);
         $entityManager->flush();
 
-        return new Response(sprintf(
-            'Mix %d is %d tracks of pure 80\'s heaven',
-            $mix->getId(),
-            $mix->getTrackCount()
-        ));
+        
+        
     }
 }
