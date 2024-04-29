@@ -27,7 +27,6 @@ class MixController extends AbstractController
             'Mix %d is %d tracks of pure 80\'s heaven',
             $mix->getId(),
             $mix->getTrackCount()
-            
         ));
     }
 }
